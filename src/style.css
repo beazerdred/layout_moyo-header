@@ -1,3 +1,89 @@
-body {
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base font */
+body {
+  font-family: Roboto, sans-serif;
+}
+
+/* CSS Variable */
+:root {
+  --color-blue: #00ACDC;
+}
+
+/* Header */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  background-color: #f0f0f0;
+
+}
+
+/* Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation */
+.navigation {
+  flex-shrink: 0;
+}
+
+/* List */
+.nav-links {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  list-style: none;
+}
+
+/* Items */
+.nav-links li + li {
+  margin-left: 20px; /* spacing between inner items only */
+}
+
+/* Links */
+.nav-links a {
+  display: block;
+  height: 100%;
+  font-size: 12px;
+  line-height: 64px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s;
+  padding: 0;
+}
+
+/* Hover */
+.nav-links a:hover {
+  color: var(--color-blue);
+}
+
+/* Active */
+.nav-links a.is-active {
+  color: var(--color-blue);
+}
+
+.nav-links a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--color-blue);
 }
