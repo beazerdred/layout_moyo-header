@@ -8,30 +8,34 @@
 /* Base font */
 body {
   font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 /* CSS Variable */
 :root {
-  --color-blue: #00ACDC;
+  --color-blue: #00acdc;
 }
 
 /* Header */
 header {
-  width: 100%;
+  max-width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 50px;
   padding-right: 50px;
-
-  background-color: #f0f0f0;
-
+  height: 60px;
+  color: #fff;
 }
 
 /* Logo */
 .logo-link {
   display: flex;
-  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
 }
 
 /* Navigation */
@@ -55,9 +59,8 @@ header {
 /* Links */
 .nav-links a {
   display: block;
-  height: 100%;
-  font-size: 12px;
-  line-height: 64px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
   text-decoration: none;
   color: #000;
@@ -75,15 +78,17 @@ header {
 /* Active */
 .nav-links a.is-active {
   color: var(--color-blue);
+  margin: 0;
+  position: relative;
 }
 
 .nav-links a.is-active::after {
-  content: "";
+  content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
   height: 4px;
   border-radius: 8px;
+  display: block;
+  bottom: 0;
   background-color: var(--color-blue);
 }
